@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Car::class, function (Faker $faker) {
 
-    $name = $faker -> unique() -> numberBetween(1, 30);
+    $name = $faker -> unique(true) -> numberBetween(1, 20);
     
     return [
         'name' => 'Car' . $name,
