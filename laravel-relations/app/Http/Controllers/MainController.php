@@ -37,6 +37,8 @@ class MainController extends Controller
             'name' => 'required|string|min:3',
             'model' => 'required|string|min:3',
             'kw' => 'required|integer|min:10|max:2000',
+            'brand_id' => 'required|integer',
+            'pilot_id.*' => 'integer'
         ]);
 
         $brand = Brand::findOrFail($request -> get('brand_id'));
